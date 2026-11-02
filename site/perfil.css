@@ -1,0 +1,344 @@
+.topo-perfil {
+  padding: 16px 0;
+}
+.voltar {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.cab {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 18px;
+  align-items: center;
+  margin: 24px 0 8px;
+}
+.cab .foto-g {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--barra);
+  border: 3px solid var(--verde);
+  box-shadow: 0 0 0 3px rgba(255, 212, 59, 0.55);
+}
+.cab h1 {
+  font-size: clamp(24px, 4vw, 34px);
+  margin: 0;
+}
+.cab p {
+  margin: 2px 0;
+  color: var(--muted);
+}
+.cab a {
+  color: var(--accent);
+}
+.cargo {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 16px 0;
+}
+.cargo h2 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+.cargo ul {
+  margin: 6px 0 0;
+  padding-left: 20px;
+}
+.cargo li {
+  margin: 2px 0;
+}
+.secao {
+  background: linear-gradient(170deg, var(--card2), var(--card) 55%);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--verde);
+  box-shadow: var(--sombra);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+.secao > h2 {
+  margin: 0;
+  font-size: 19px;
+}
+.secao .funcao {
+  margin: 2px 0 12px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin: 8px 0 12px;
+}
+.numeros div {
+  border: 1px solid var(--line);
+  background: rgba(7, 17, 31, 0.35);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.numeros b {
+  display: block;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+.numeros small {
+  color: var(--muted);
+}
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.tabela th,
+.tabela td {
+  text-align: left;
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.tabela td.n {
+  text-align: right;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.tabela .mini {
+  height: 5px;
+  background: var(--barra);
+  border-radius: 3px;
+  margin-top: 4px;
+  overflow: hidden;
+}
+.tabela .mini i {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+.itens {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.itens li {
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+.itens li small {
+  display: block;
+  color: var(--muted);
+}
+.itens a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+.tag {
+  display: inline-block;
+  font-size: 12px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  margin-right: 6px;
+  white-space: nowrap;
+}
+.tag.sim {
+  color: var(--bom);
+  border-color: var(--bom);
+}
+.tag.nao {
+  color: var(--baixo);
+  border-color: var(--baixo);
+}
+.tag.neutro {
+  color: var(--muted);
+}
+.indisponivel {
+  color: var(--muted);
+  font-style: italic;
+}
+.sobre {
+  margin-top: 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.sobre a {
+  color: var(--accent);
+}
+.ferramentas {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.ferramentas input,
+.ferramentas label {
+  font: inherit;
+  font-size: 14px;
+}
+.ferramentas input[type='search'] {
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 10px;
+  flex: 1 1 200px;
+}
+.mais-itens {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+  cursor: pointer;
+}
+.rodape {
+  color: var(--muted);
+  font-size: 13px;
+  padding-bottom: 48px;
+}
+.meses {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  align-items: end;
+  height: 90px;
+  margin: 10px 0 4px;
+}
+.meses div {
+  background: var(--accent);
+  border-radius: 3px 3px 0 0;
+  min-height: 2px;
+}
+.rot-meses {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 4px;
+  font-size: 11px;
+  color: var(--muted);
+  text-align: center;
+}
+@media (max-width: 640px) {
+  .cab {
+    grid-template-columns: 72px 1fr;
+  }
+  .cab .foto-g {
+    width: 72px;
+    height: 72px;
+  }
+}
+
+/* ---- votos explícitos ---- */
+.voto {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.voto-topo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+.veredito {
+  font-weight: 700;
+  font-size: 13px;
+  padding: 3px 12px;
+  border-radius: 999px;
+  border: 2px solid var(--line);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+.veredito.sim {
+  color: var(--accent-ink);
+  background: var(--bom);
+  border-color: var(--bom);
+}
+.veredito.nao {
+  color: #fff;
+  background: var(--baixo);
+  border-color: var(--baixo);
+}
+.veredito.neutro {
+  color: var(--ink);
+  border-color: var(--muted);
+}
+.veredito.sem {
+  color: var(--muted);
+  border-style: dashed;
+}
+.voto-meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+.voto-titulo {
+  font-weight: 700;
+  font-size: 16px;
+}
+.voto-titulo small {
+  font-weight: 400;
+  color: var(--muted);
+}
+.voto-resumo {
+  margin-top: 2px;
+  font-size: 14px;
+}
+.voto-res {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.voto details {
+  margin-top: 4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.voto details summary {
+  cursor: pointer;
+}
+.voto details p {
+  margin: 4px 0 0;
+}
+.voto-sem .voto-titulo,
+.voto-sem .voto-resumo {
+  opacity: 0.75;
+}
+
+.voto-proc {
+  font-size: 12px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 2px;
+}
+.voto-acao {
+  margin-top: 6px;
+  font-size: 13px;
+  background: var(--bg);
+  border-left: 3px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.voto-ia {
+  font-size: 0.78rem;
+  opacity: 0.7;
+  margin: 2px 0 6px;
+}
+
+.fase{display:inline-block;font-size:.72rem;font-weight:600;padding:1px 8px;border-radius:99px;background:#e8e8e8;color:#333;margin-left:6px;vertical-align:middle}
+.fase-lei{background:#cdeedb;color:#0b5a2b}
+.fase-outra,.fase-aprovado,.fase-plenario{background:#d8e6fb;color:#12408a}
+.fase-comissao{background:#fdf0c8;color:#7a5600}
+.fase-parado{background:#eee;color:#666}
+details.parados{margin-top:.8rem}
+details.parados summary{cursor:pointer;font-weight:600}

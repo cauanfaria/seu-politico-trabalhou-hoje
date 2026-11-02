@@ -1,0 +1,29 @@
+{
+ "geradoEm": "2026-10-30T21:07:48.958Z",
+ "ano": 2026,
+ "periodo": {
+  "inicio": "2026-01-01",
+  "fim": "2026-10-30"
+ },
+ "camara": {
+  "totalSessoes": 75,
+  "primeiraSessao": "2026-02-02",
+  "ultimaSessao": "2026-10-28",
+  "deputados": 567,
+  "semHistorico": 0
+ },
+ "senado": {
+  "totalVotacoes": 62,
+  "primeiraVotacao": "2026-02-24",
+  "ultimaVotacao": "2026-10-15",
+  "codigosNaoReconhecidos": {}
+ },
+ "fontes": {
+  "camara": "https://dadosabertos.camara.leg.br",
+  "senado": "https://legis.senado.leg.br/dadosabertos"
+ },
+ "metodologia": {
+  "camara": "Presenca em Sessoes Deliberativas encerradas do Plenario, conforme a lista oficial de presentes de cada sessao. O total possivel considera apenas as sessoes realizadas enquanto o deputado estava em exercicio (historico oficial). A API nao distingue ausencia justificada de nao justificada; por isso os numeros podem diferir dos exibidos no portal da Camara.",
+  "senado": "Presenca em votacoes nominais do Plenario, conforme o registro oficial de cada votacao. \"Atividade parlamentar\" e missao contam como ausencia justificada; licencas ficam fora do total possivel."
+ }
+}

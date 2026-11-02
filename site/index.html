@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Seu político trabalhou hoje?</title>
+    <meta
+      name="description"
+      content="Ranking de presença de deputados federais e senadores, com dados abertos oficiais."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="perfil.css" />
+    <link rel="stylesheet" href="paginas.css" />
+    <link rel="stylesheet" href="estadual.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <div class="miolo">
+        <nav class="nav" aria-label="Seções do site">
+          <a href="index.html" aria-current="page">Ranking</a>
+          <a href="painel.html">Painel</a>
+          <a href="votacoes.html">Trabalhos realizados</a>
+        </nav>
+        <p class="selo">Transparência com dados abertos</p>
+        <h1>Seu político trabalhou hoje?</h1>
+        <p class="sub" id="sub">
+          Presença de deputados federais e senadores nas votações do Plenário em
+          <span id="ano">2026</span>, calculada a partir dos dados oficiais da Câmara e do Senado.
+        </p>
+      </div>
+    </header>
+
+    <main class="miolo">
+      <div class="abas" role="tablist">
+        <button role="tab" id="aba-camara" aria-selected="true" data-aba="camara">Deputados Federais</button>
+        <button role="tab" id="aba-senado" aria-selected="false" data-aba="senado">Senadores</button>
+        <button role="tab" id="aba-alesp" aria-selected="false" data-aba="alesp">Deputados Estaduais</button>
+      </div>
+
+      <div class="modo" id="modo" role="group" aria-label="Como ver o ranking">
+        <span>Ver ranking por:</span>
+        <button type="button" data-modo="presenca" aria-pressed="true">Presença (bater ponto)</button>
+        <button type="button" data-modo="projetos" aria-pressed="false">Projetos feitos</button>
+        <button type="button" data-modo="andaram" aria-pressed="false">Projetos que andaram</button>
+      </div>
+
+      <div id="federal">
+      <section id="hoje" class="hoje" aria-live="polite"></section>
+
+      <section class="resumo" id="resumo"></section>
+
+      <section class="filtros">
+        <label>
+          <span>Buscar</span>
+          <input type="search" id="busca" placeholder="Nome do parlamentar" autocomplete="off" />
+        </label>
+        <label>
+          <span>Estado</span>
+          <select id="uf"><option value="">Todos</option></select>
+        </label>
+        <label>
+          <span>Partido</span>
+          <select id="partido"><option value="">Todos</option></select>
+        </label>
+        <label>
+          <span>Ordem</span>
+          <select id="ordem">
+            <option value="desc">Maior presença primeiro</option>
+            <option value="asc">Menor presença primeiro</option>
+            <option value="projetos">Mais projetos apresentados</option>
+            <option value="andaram">Mais projetos que andaram</option>
+            <option value="gastoMenor">Menor gasto da cota parlamentar</option>
+            <option value="gastoMaior">Maior gasto da cota parlamentar</option>
+            <option value="emendas">Mais emendas pagas</option>
+            <option value="nome">Nome (A a Z)</option>
+          </select>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="parciais" />
+          <span>Incluir mandatos parciais (suplentes e licenciados com menos da metade das votações)</span>
+        </label>
+      </section>
+
+      <p id="contagem" class="contagem"></p>
+      <ol id="lista" class="lista"></ol>
+      <button id="mais" class="mais" hidden>Mostrar mais</button>
+
+      <section class="metodo" id="metodologia">
+        <h2>Como o cálculo é feito</h2>
+        <div id="metodo-texto"></div>
+        <p class="aviso">
+          Presença em votações é um retrato parcial do trabalho parlamentar: não mede comissões, articulação, trabalho
+          no estado nem a qualidade da atuação. Os dados são oficiais, mas podem ser corrigidos pelas casas
+          legislativas depois da publicação.
+        </p>
+        <p class="fonte" id="fonte"></p>
+      </section>
+      </div>
+      <div id="estadual" hidden></div>
+    </main>
+
+    <script src="comum.js"></script>
+    <script src="estadual.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
